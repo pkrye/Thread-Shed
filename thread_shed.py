@@ -157,3 +157,23 @@ thread_sold_split = []
 for thread in thread_sold:
   for color in thread.split("&"):
     thread_sold_split.append(color)
+
+# print(thread_sold_split)
+
+def color_count(color):
+  counter = 0
+  for thread in thread_sold_split:
+    if thread == color:
+      counter += 1
+  return counter
+
+# print(color_count("white"))
+
+colors = ["red", "yellow", "green", "white", "black", "blue", "purple"]
+
+
+# Final output of profit and spools of each color sold
+print("Total Sales for the Day: $" + str(total_sales))
+for color in colors:
+  statement = "Today we sold {amount} spools of {color} thread!"
+  print(statement.format(amount = color_count(color), color = color))
