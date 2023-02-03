@@ -141,3 +141,19 @@ for bit in transactions_clean:
 # print(customers)
 # print(sales)
 # print(thread_sold)
+
+total_sale = 0
+for mon in sales:
+  moni = mon.strip("$")
+  monie = float(moni)
+  total_sale += monie
+
+total_sales = round(total_sale, 2)
+
+# print(total_sales)
+# print(thread_sold)
+
+thread_sold_split = []
+for thread in thread_sold:
+  for color in thread.split("&"):
+    thread_sold_split.append(color)
