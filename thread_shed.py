@@ -128,3 +128,16 @@ for minilist in daily_transactions_split:
   transactions_clean.append(transaction_clean)
 
 # print(transactions_clean)
+
+customers = []
+sales = []
+thread_sold = []
+
+for bit in transactions_clean:
+  customers.append(bit[0])
+  sales.append(bit[1])
+  thread_sold.append(bit[2])
+
+# print(customers)
+# print(sales)
+# print(thread_sold)
