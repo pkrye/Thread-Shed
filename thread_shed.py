@@ -108,3 +108,23 @@ green&white;,;09/15/17,   Gail Phelps   ;,;$30.52
 #------------------------------------------------
 # Start coding below!
 
+daily_sales_replaced = daily_sales.replace(";,;", ";")
+
+daily_transactions = daily_sales_replaced.split(",")
+
+daily_transactions_split = []
+for item in daily_transactions:
+  splitty = item.split(";")
+  daily_transactions_split.append(splitty)
+
+# print(daily_transactions_split)
+
+transactions_clean = []
+for minilist in daily_transactions_split:
+  transaction_clean = []
+  for item in minilist:
+    cutty = item.strip()
+    transaction_clean.append(cutty)
+  transactions_clean.append(transaction_clean)
+
+# print(transactions_clean)
